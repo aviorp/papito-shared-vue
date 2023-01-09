@@ -1,5 +1,5 @@
 <template>
-  <PageLayout>
+  <PageLayout :state="state">
     <PModal
       v-if="showModal"
       @close="showModal = false"
@@ -68,8 +68,23 @@
 
 <script setup>
 import { ref } from "vue";
+import { states } from "@/constants";
 import PModal from "@/components/PModal.vue";
 import PCard from "@/components/PCard.vue";
 import PageLayout from "@/layouts/PageLayout.vue";
 const showModal = ref(false);
+const state = ref(states.INIT);
+const refresh = async () => {
+  state.value = states.LOADING;
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    state.value = states.INIT;
+  } catch (error) {
+    console.error(error);
+    state.value = states.EMPTY;
+  } finally {
+    state.value = states.INIT;
+  }
+};
+refresh();
 </script>

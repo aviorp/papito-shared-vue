@@ -40,6 +40,12 @@ export default [
     plugins: [vue()],
   })),
   {
+    input: "src/constants/index.js",
+    output: {
+      file: "dist/src/constants/index.js",
+    },
+  },
+  {
     input: "src/imports.js",
     output: {
       file: "dist/src/imports.js",
