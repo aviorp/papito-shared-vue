@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew&display=swap'); 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
@@ -60,6 +60,7 @@
   margin: 0;
   position: relative;
   font-weight: normal;
+  font-family: 'Noto Sans Hebrew', sans-serif;
 }
 
 body {

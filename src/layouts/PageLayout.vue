@@ -1,9 +1,12 @@
 <template>
   <main class="h-screen w-full">
-    <header class="navbar bg-base-100 shadow-md rounded-sm sticky top-0 z-10">
+    <header
+      class="navbar bg-base-100 shadow-lg rounded-sm sticky top-0 z-10 flex items-center justify-between"
+    >
       <PBreadcrumbs />
+      <slot name="page-actions" />
     </header>
-    <PLoading v-if="state === states.LOADING" />
+    <PLoading class="top-0" v-if="state === states.LOADING" />
     <div v-else class="p-6 grid grid-cols-3 gap-6">
       <slot />
     </div>

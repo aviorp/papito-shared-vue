@@ -12,7 +12,7 @@
         </p>
       </template>
     </PModal>
-    <PCard class="col-span-3" @open-modal="showModal = true">
+    <PCard class="col-start-1 col-end-3" @open-modal="showModal = true">
       <h2 class="card-title">Welcome Aboard !</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
@@ -42,26 +42,15 @@
         quisquam, vero tempora sed incidunt nobis qui! Sed quo sunt officia
         quasi culpa quia quae soluta. Impedit fuga velit at odio in omnis,
         corporis unde perspiciatis quidem fugit, molestiae consequuntur
-        voluptas, quibusdam maiores aspernatur accusantium. Ab eveniet eos
-        mollitia eius praesentium quos, veniam autem atque quam quasi temporibus
-        quae animi corporis facere sint blanditiis unde, qui doloribus, dolor
-        vitae! Blanditiis totam alias, modi provident saepe repellat ab
-        doloribus reiciendis! Possimus totam, ipsum qui ipsam sapiente quam id
-        a, quia itaque, aliquam tempore? Aliquam ipsum id pariatur quo soluta
-        explicabo possimus laborum iure nostrum rerum sint recusandae a
-        accusantium commodi, unde sequi nam perspiciatis vero accusamus delectus
-        nemo fuga obcaecati. Alias, odio, eaque quibusdam modi quod corrupti
-        neque in libero accusantium non saepe. Impedit in dolores quos obcaecati
-        atque! Doloremque totam assumenda accusantium ex officiis non sit ullam
-        quidem aspernatur similique, aut doloribus. Accusantium quae harum
-        necessitatibus eos quos cumque omnis ab quas odio iste? Ullam aperiam
-        necessitatibus omnis error illo quia architecto ipsam nihil sed ut quo
-        nemo commodi totam, dicta modi cumque illum perferendis! Culpa.
+        voluptas, quibusdam maiores aspernatur.
       </p>
     </PCard>
     <PCard @open-modal="showModal = true" v-for="i in 6" :key="i">
       <h2 class="card-title">Cell {{ i }}</h2>
       <p>lorem120</p>
+      <template #card-actions>
+        <PButton @click="showModal = true">Open Modal</PButton>
+      </template>
     </PCard>
   </PageLayout>
 </template>
@@ -71,6 +60,7 @@ import { ref } from "vue";
 import { states } from "@/constants";
 import PModal from "@/components/PModal.vue";
 import PCard from "@/components/PCard.vue";
+import PButton from "@/components/PButton.vue";
 import PageLayout from "@/layouts/PageLayout.vue";
 const showModal = ref(false);
 const state = ref(states.INIT);

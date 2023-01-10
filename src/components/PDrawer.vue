@@ -4,21 +4,23 @@
       <header
         class="bg-base-200 bg-opacity-90 backdrop-blur sticky w-full top-0 items-center gap-2 px-4 py-2 hidden lg:flex"
       >
-        <a
-          href="/"
-          aria-current="page"
-          aria-label="Homepage"
-          class="flex-0 btn btn-ghost px-2"
-          ><div
-            class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl"
+        <slot name="header">
+          <a
+            href="/"
+            aria-current="page"
+            aria-label="Homepage"
+            class="flex-0 btn btn-ghost px-2"
+            ><div
+              class="font-title text-primary inline-flex text-lg transition-all duration-200 md:text-3xl"
+            >
+              <span class="capitalize">Papito</span>
+              <span class="text-base-content uppercase">UI</span>
+            </div></a
           >
-            <span class="capitalize">Papito</span>
-            <span class="text-base-content uppercase">UI</span>
-          </div></a
-        >
+        </slot>
       </header>
       <ul
-        class="menu p-4 bg-base-200 shadow-sm h-full text-base-content min-w-82"
+        class="menu menu-compact p-4 bg-base-200 shadow-sm h-full text-base-content min-w-82"
       >
         <!-- Sidebar content here -->
 
