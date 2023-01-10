@@ -32,19 +32,24 @@ export default [
       }),
     ],
   },
-  ...FastGlob.sync("src/components/*").map((file) => ({
+  ...FastGlob.sync("src/**/*", {
+    ignore: [
+      "src/components/__tests__/**/*",
+      "src/assets/**/*",
+      "src/pages/**/*",
+      "src/imports.js",
+      "src/router/**/*",
+      "src/App.vue",
+      "src/main.js",
+      "src/logo.svg",
+    ],
+  }).map((file) => ({
     input: file,
     output: {
       file: `dist/${file}`,
     },
     plugins: [vue()],
   })),
-  {
-    input: "src/constants/index.js",
-    output: {
-      file: "dist/src/constants/index.js",
-    },
-  },
   {
     input: "src/imports.js",
     output: {

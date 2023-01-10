@@ -11,8 +11,8 @@
 </template>
 
 <script setup>
-import PBreadcrumbs from "@/components/PBreadcrumbs.vue";
 import PLoading from "@/components/PLoading.vue";
+import PBreadcrumbs from "@/components/PBreadcrumbs.vue";
 import { toRefs } from "vue";
 import { states } from "@/constants";
 const { state } = toRefs(props);
