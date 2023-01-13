@@ -6,5 +6,5 @@ export { default as PDropdown } from "./components/PDropdown.vue";
 export { default as PInput } from "./components/PInput.vue";
 export { default as PLoading } from "./components/PLoading.vue";
 export { default as PModal } from "./components/PModal.vue";
-export { default as constants } from "./constants/index.js";
+export { default as constants } from "./constants/constants.js";
 export { default as PPage } from "./layouts/PageLayout.vue";
