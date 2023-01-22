@@ -1,6 +1,6 @@
 {
   "name": "papito-shared-vue",
-  "version": "0.1.39",
+  "version": "0.1.40",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -12,9 +12,9 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./styles.css": {
-      "import": "./dist/styles.css",
-      "require": "./dist/styles.css"
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "scripts": {
