@@ -1,16 +1,16 @@
 {
   "name": "papito-shared-vue",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "type": "module",
-  "main": "dist/src/imports.js",
-  "source": "src/imports.js",
+  "main": "dist/src/index.js",
+  "source": "src/index.js",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/src/imports.js",
-      "require": "./dist/src/imports.cjs"
+      "import": "./dist/src/index.js",
+      "require": "./dist/src/index.cjs"
     }
   },
   "scripts": {
