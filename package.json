@@ -1,6 +1,6 @@
 {
   "name": "papito-shared-vue",
-  "version": "0.1.32",
+  "version": "0.1.33",
   "type": "module",
   "main": "dist/src/index.js",
   "source": "src/index.js",
