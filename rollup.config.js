@@ -84,11 +84,11 @@ const config = [
       },
     ],
     plugins: [
+      vue(),
       resolve({
         mainFields: ["main"],
-        extensions: [".js", ".json", ".vue"],
+        extensions: [".vue", ".js"],
       }),
-      vue(),
       babel({
         babelHelpers: "bundled",
         exclude: "node_modules/**",
@@ -112,7 +112,7 @@ const config = [
       }),
       del({ targets: ["dist/*"] }),
     ],
-    external: ["vue", "postcss", "vue-router", "vuex", "axios"],
+    // external: ["vue", "postcss", "vue-router", "vuex", "axios"],
   },
 ];
 
