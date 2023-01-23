@@ -5,10 +5,7 @@
         <button class="btn btn-primary">Dropdown</button>
       </slot>
     </label>
-    <ul
-      tabindex="0"
-      class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
-    >
+    <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
       <li v-for="item in items" :key="item" @click="$emit('select', item)">
         <a>{{ item }}</a>
       </li>

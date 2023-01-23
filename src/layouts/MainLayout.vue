@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between max-h-screen">
-    <PDrawer :items="items" class="w-3/12" />
+    <PDrawer :items="items" dense class="w-64" />
     <RouterView class="flex-1 overflow-y-auto" />
   </div>
 </template>

@@ -7,12 +7,21 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
+// import { useRoute } from "vue-router";
 
-const route = useRoute();
-const {
-  meta: { title },
-} = route;
+// TODO: Add breadcrumbs
+const props = defineProps({
+  title: {
+    type: String,
+    required: true,
+    default: "Home",
+  },
+});
+
+// const route = useRoute();
+// const {
+//   meta: { title },
+// } = route;
 </script>
 
 <style lang="scss" scoped></style>

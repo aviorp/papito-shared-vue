@@ -1,8 +1,6 @@
 <template>
   <main class="h-screen w-full">
-    <header
-      class="navbar bg-base-100 shadow-lg rounded-sm sticky top-0 z-10 flex items-center justify-between"
-    >
+    <header class="navbar bg-base-100 shadow-lg rounded-sm sticky top-0 z-10 flex items-center justify-between">
       <PBreadcrumbs />
       <slot name="page-actions" />
     </header>
@@ -18,6 +16,7 @@ import PLoading from "@/components/PLoading.vue";
 import PBreadcrumbs from "@/components/PBreadcrumbs.vue";
 import { toRefs } from "vue";
 import { states } from "@/constants";
+
 const { state } = toRefs(props);
 
 const props = defineProps({
