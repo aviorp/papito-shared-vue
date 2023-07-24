@@ -5,7 +5,6 @@ export { default as PDrawer } from "./components/PDrawer.vue";
 export { default as PInput } from "./components/PInput.vue";
 export { default as PLoading } from "./components/PLoading.vue";
 export { default as PModal } from "./components/PModal.vue";
-export * as constants from "./constants";
 export { default as PageLayout } from "./layouts/PageLayout.vue";
+export * as constants from "./constants";
 export * as utils from "./utils";
-import "./assets/main.css";
